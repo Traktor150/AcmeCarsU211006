@@ -21,6 +21,8 @@ req.onload = () => {
         console.log(i);
 
         const listItem = document.createElement('li');
+        
+        listItem.onclick = 'myFunktion(cars[i].Id)';
         listItem.textContent = cars[i].Make + ' ' + cars[i].Model + ' ' + cars[i].Year;
         myList.appendChild(listItem);
     }
