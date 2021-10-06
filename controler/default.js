@@ -1,3 +1,5 @@
 exports.home = (req, res) => {
-    res.send('IT´S ALIVE!!')
+    //const homes = require('../public/home.html');
+    res.sendfile('public/home.html')
+    console.log('sent home')
 };

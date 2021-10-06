@@ -6,14 +6,17 @@ const port = process.env.PORT || 8083;
 
 //const router = require('./routes');
 
+const scriptRouter = require('./routes/scriptRoute');
 const defaultRouter = require('./routes/default');
+const carRouter = require('./routes/CarRoute');
 
+server.use('/js', scriptRouter);
 
-server.use(express.static('public'));
+server.use('/cars', carRouter);
 
 server.use('/', defaultRouter);
 
-
+server.use(express.static('public'));
 
 
 
